@@ -1,0 +1,1512 @@
+
+
+demo_axes_divider.py,99,demo,(),
+
+
+
+_formlayout.py,488,fedit,"(data, title, comment, icon, parent, apply)","Create form dialog and return result (if Cancel button is pressed, return None)
+
+data: datalist, datagroup title: str comment: str icon: QIcon instance parent: parent QWidget apply: apply callback (function)
+
+datalist: list/tuple of (field_name, field_value) datagroup: list/tuple of (datalist *or* datagroup, title, comment)
+
+-> one field for each member of a datalist -> one tab for each member of a top-level datagroup -> one page (of a multipage widget, each page can be selected with a combo box) for each member of a datagroup inside a datagroup
+
+Supported types for field_value:
+
+- int, float, str, unicode, bool
+
+- colors: in Qt-compatible text form, i.e. in hex format or name (red, ...) (automatically detected from a string)
+
+- list/tuple: * the first element will be the selected index (or value) * the other elements can be couples (key, value) or only values
+"
+
+test_axes_grid1.py,477,test_axes_class_tuple,(),
+
+figure_title.py,12,f,(t),
+gridspec1.py,231,squiggle_xy,"(a, b, c, d, i)",
+
+demo_gridspec03.py,17,annotate_axes,(fig),
+
+
+
+test_mathtext.py,338,test_mathtext_to_png,(tmpdir),
+axes3d.py,2943,get_test_data,(delta),"Return a tuple X, Y, Z with a test data set.
+
+
+"
+
+tight_layout.py,212,get_tight_layout_figure,"(fig, axes_list, subplotspec_list, renderer, pad, h_pad, w_pad, rect)","Return subplot parameters for tight-layouted-figure with specified padding.
+
+Parameters ---------- fig : Figure axes_list : list of Axes subplotspec_list : list of `.SubplotSpec` The subplotspecs of each axes. renderer : renderer pad : float Padding between the figure edge and the edges of subplots, as a fraction of the font size. h_pad, w_pad : float Padding (height/width) between edges of adjacent subplots.
+
+Defaults to *pad*. rect : Tuple[float, float, float, float], optional (left, bottom, right, top) rectangle in normalized figure coordinates that the whole subplots area (including labels) will fit into. Defaults to using the entire figure.
+##### Returns
+"
+
+
+gridspec_multicolumn.py,15,format_axes,(fig),
+
+
+
+
+
+
+
+
+
+colormap-manipulation.py,194,plot_linearmap,(cdict),
+
+test_transforms.py,664,test_lockable_bbox,(locked_element),
+
+
+parasite_axes1.py,413,host_subplot,(**kwargs),"Create a subplot that can act as a host to parasitic axes.
+
+Parameters ---------- figure : `matplotlib.figure.Figure` Figure to which the subplot will be added. Defaults to the current figure `.pyplot.gcf()`.
+
+*args, **kwargs Will be passed on to the underlying ``Axes`` object creation.
+"
+
+radar_chart.py,109,example_data,(),
+
+test_preprocess_data.py,197,test_docstring_addition,(),
+
+
+test_table.py,181,test_table_cells,(),
+
+
+github_stats.py,94,report,"(issues, show_urls)","Summary report about a list of issues, printing number and title.
+
+
+"
+test_spines.py,67,test_label_without_ticks,(),
+filled_step.py,79,stack_hist,"(ax, stacked_data, sty_cycle, bottoms, hist_func, labels, plot_func, plot_kwargs)","Parameters ---------- ax : axes.Axes The axes to add artists too
+
+stacked_data : array or Mapping A (N, M) shaped array.
+
+The first dimension will be iterated over to compute histograms row-wise
+
+sty_cycle : Cycler or operable of dict Style to apply to each set
+
+bottoms : array, default: 0 The initial positions of the bottoms.
+
+hist_func : callable, optional Must have signature `bin_vals, bin_edges = f(data)`. `bin_edges` expected to be one longer than `bin_vals`
+
+labels : list of str, optional The label for each set.
+
+If not given and stacked data is an array defaults to 'default set {n}'
+
+If stacked_data is a mapping, and labels is None, default to the keys (which may come out in a random order).
+
+If stacked_data is a mapping and labels is given then only the columns listed by be plotted.
+
+plot_func : callable, optional Function to call to draw the histogram must have signature:
+
+ret = plot_func(ax, edges, top, bottoms=bottoms, label=label, **kwargs)
+
+plot_kwargs : dict, optional Any extra kwargs to pass through to the plotting function.
+
+This will be the same for all calls to the plotting function and will over-ride the values in cycle.
+##### Returns
+* **arts **: dict
+    Dictionary of artists keyed on their labels
+
+"
+
+test_category.py,277,test_overriding_units_in_plot,"(fig_test, fig_ref)",
+
+run_examples.py,43,main,(),
+voxels_rgb.py,13,midpoints,(x),
+test_collections.py,640,test_quadmesh_set_array,(),
+
+markevery_demo.py,44,trim_axs,"(axs, N)","Reduce *axs* to *N* Axes. All further Axes are removed from the figure.
+
+
+"
+usage.py,212,my_plotter,"(ax, data1, data2, param_dict)","A helper function to make a graph
+
+Parameters ---------- ax : Axes The axes to draw to
+
+data1 : array The x data
+
+data2 : array The y data
+
+param_dict : dict Dictionary of kwargs to pass to ax.plot
+##### Returns
+* **out **: list
+    list of artists added
+
+"
+
+
+
+
+
+
+text_rotation.py,24,addtext,"(ax, props)",
+test_text.py,685,test_fontproperties_kwarg_precedence,(),"Test that kwargs take precedence over fontproperties defaults.
+
+
+"
+
+strip_chart.py,42,emitter,(p),"Return a random value in [0, 1) with probability p, else 0.
+
+
+"
+
+test_usetex.py,82,test_textcomp_full,(),
+pyplot2.py,3136,nipy_spectral,(),
+
+
+
+marker_reference.py,37,split_list,(a_list),
+
+
+multi_image.py,41,update,(changed_image),
+test_backend_webagg.py,8,test_webagg_fallback,(backend),
+
+
+
+math_symbol_table.py,161,setup,(app),
+
+units.py,58,_is_natively_supported,(x),"Return whether *x* is of a type that Matplotlib natively supports or an array of objects of such types.
+
+
+"
+test_dviread.py,53,test_dviread,(),
+firefox.py,19,svg_parse,(path),
+backend_svg.py,264,generate_css,(attrib),
+customized_violin.py,30,set_axis_style,"(ax, labels)",
+hinton_demo.py,17,hinton,"(matrix, max_weight, ax)","Draw Hinton diagram for visualizing a weight matrix.
+
+
+"
+
+backend_pgf.py,982,_cleanup_all,(),
+
+test_sankey.py,10,test_label,(),
+
+
+date_precision_and_epochs.py,28,_reset_epoch_for_tutorial,(),"Users (and downstream libraries) should not use the private method of resetting the epoch.
+
+
+"
+
+grid_finder2.py,8,_deprecate_factor_none,(factor),
+timers.py,14,update_title,(axes),
+layer_images.py,12,func3,"(x, y)",
+visualize_tests.py,48,run,(show_browser),"Build a website for visual comparison
+
+
+"
+
+
+backend_template.py,169,new_figure_manager_given_figure,"(num, figure)","Create a new figure manager instance for the given figure.
+
+
+"
+barchart.py,34,autolabel,(rects),"Attach a text label above each bar in *rects*, displaying its height.
+
+
+"
+coords_demo.py,28,on_click,(event),
+
+
+widgets2.py,21,do_event,"(tool, etype, button, xdata, ydata, key, step)","Trigger an event
+
+Parameters ---------- tool : matplotlib.widgets.RectangleSelector etype the event to trigger xdata : int x coord of mouse in data coords ydata : int y coord of mouse in data coords button : int or str button pressed None, 1, 2, 3, 'up', 'down' (up and down are used for scroll events) key the key depressed when the mouse event triggered (see :class:`KeyEvent`) step : int number of scroll steps (positive for 'up', negative for 'down')
+"
+barchart_demo.py,67,plot_student_results,"(student, scores, cohort_size)",
+
+colors1.py,71,demo,(sty),
+
+
+test_marker.py,145,test_marker_clipping,"(fig_ref, fig_test)",
+lifecycle.py,200,currency,"(x, pos)","The two args are the value and tick position
+
+
+"
+simple_anim.py,18,animate,(i),
+artist_reference.py,21,label,"(xy, text)",
+
+
+_backend_pdf_ps.py,14,_cached_get_afm_from_fname,(fname),
+generate_credits.py,78,generate_credits,(),
+test_backend_cairo.py,12,test_patch_alpha_coloring,"(fig_test, fig_ref)","Test checks that the patch and collection are rendered with the specified alpha values in their facecolor and edgecolor.
+
+
+"
+double_pendulum.py,83,animate,(i),
+
+test_container.py,10,test_errorbar_remove,(),
+
+contour1.py,636,_find_closest_point_on_path,"(lc, point)","Parameters ---------- lc : coordinates of vertices point : coordinates of test point
+
+
+"
+
+
+
+
+
+
+
+
+keypress_demo.py,13,on_press,(event),
+
+
+
+triplot.py,5,triplot,"(ax, **kwargs)","Draw a unstructured triangular grid as lines and/or markers.
+
+The triangulation to plot can be specified in one of two ways; either::
+
+triplot(triangulation, ...)
+
+where triangulation is a `.Triangulation` object, or
+
+::
+
+triplot(x, y, ...) triplot(x, y, triangles, ...) triplot(x, y, triangles=triangles, ...) triplot(x, y, mask=mask, ...) triplot(x, y, triangles, mask=mask, ...)
+
+in which case a Triangulation object will be created.
+
+See `.Triangulation` for a explanation of these possibilities.
+
+The remaining args and kwargs are the same as for `~.Axes.plot`.
+##### Returns
+* **lines **: `~matplotlib.lines.Line2D`
+    The drawn triangles edges.
+
+* **markers **: `~matplotlib.lines.Line2D`
+    The drawn marker nodes.
+
+"
+
+
+
+tick-locators.py,16,setup,"(ax, title)","Set up common parameters for the Axes in the example.
+
+
+"
+test_contour.py,390,test_contour_linewidth,"(rc_lines_linewidth, rc_contour_linewidth, call_linewidths, expected)",
+setup.py,68,has_flag,(flagname),"Return whether a flag name is supported on the specified compiler.
+
+
+"
+
+test_afm.py,132,test_malformed_header,"(afm_data, caplog)",
+
+
+test_artist.py,275,test_artist_inspector_get_aliases,(),
+
+
+secondary_axis.py,156,anomaly_to_celsius,(x),
+
+poly_editor.py,22,dist_point_to_segment,"(p, s0, s1)","Get the distance of a point to a segment. *p*, *s0*, *s1* are *xy* sequences This algorithm from http://geomalgorithms.com/a02-_lines.html
+
+
+"
+fancyarrow_demo.py,25,to_texstring,(s),
+
+
+
+tricontour.py,292,tricontourf,"(ax, **kwargs)","%(_tricontour_doc)s
+
+antialiased : bool, default: True Whether to use antialiasing.
+
+Notes ----- `.tricontourf` fills intervals that are closed at the top; that is, for boundaries *z1* and *z2*, the filled region is::
+
+z1 < Z <= z2
+
+except for the lowest interval, which is closed on both sides (i.e. it includes the lowest value).
+"
+triinterpolate.py,1584,_extract_submatrices,"(M, block_indices, block_size, axis)","Extract selected blocks of a matrices *M* depending on parameters *block_indices* and *block_size*.
+
+
+##### Returns
+* **    M_res[..., ir, **: ] = M[(block_indices*block_size+ir),
+
+"
+
+errorbars_and_boxes.py,42,make_error_boxes,"(ax, xdata, ydata, xerror, yerror, facecolor, edgecolor, alpha)",
+test_axes.py,6391,test_relative_ticklabel_sizes,(size),
+demo_text_rotation_mode.py,26,test_rotation_mode,"(fig, mode, subplot_location)",
+
+test_axisartist_grid_finder.py,6,test_pretty_print_format,(),
+
+test_path.py,438,test_intersect_zero_length_segment,(),
+pyplot1.py,246,f,(t),
+
+conf2.py,386,setup,(app),
+backend_webagg.py,285,ipython_inline_display,(figure),
+
+joinstyle.py,26,plot_angle,"(ax, x, y, angle, style)",
+leftventricle_bulleye.py,15,bullseye_plot,"(ax, data, seg_bold, cmap, norm)","Bullseye representation for the left ventricle.
+
+Parameters ---------- ax : axes data : list of int and float The intensity values for each of the 17 segments seg_bold : list of int, optional A list with the segments to highlight cmap : ColorMap or None, optional Optional argument to set the desired colormap norm : Normalize or None, optional Optional argument to normalize data into the [0.0, 1.0] range
+
+Notes ----- This function creates the 17 segment model for the left ventricle according to the American Heart Association (AHA) [1]_
+
+References ---------- .. [1] M. D. Cerqueira, N. J. Weissman, V. Dilsizian, A. K. Jacobs, S. Kaul, W. K. Laskey, D. J. Pennell, J. A. Rumberger, T. Ryan, and M. S. Verani, ""Standardized myocardial segmentation and nomenclature for tomographic imaging of the heart"", Circulation, vol. 105, no. 4, pp. 539-542, 2002.
+"
+colormap_reference.py,48,plot_color_gradients,"(cmap_category, cmap_list)",
+demo_axes_hbox_divider.py,15,make_heights_equal,"(fig, rect, ax1, ax2, pad)",
+_secondary_axes.py,10,_make_secondary_locator,"(rect, parent)","Helper function to locate the secondary axes.
+
+A locator gets used in `Axes.set_aspect` to override the default locations...
+
+It is a function that takes an axes object and a renderer and tells `set_aspect` where it is to be placed.
+
+This locator make the transform be in axes-relative co-coordinates because that is how we specify the ""location"" of the secondary axes.
+
+Here *rect* is a rectangle [l, b, w, h] that specifies the location for the axes in the transform given by *trans* on the *parent*.
+"
+slider_demo.py,57,colorfunc,(label),
+
+axes_rgb1.py,60,imshow_rgb,"(ax, r, g, b, **kwargs)",
+_cm.py,1096,_gist_yarg,(x),
+
+
+
+test_patheffects.py,119,test_collection,(),
+
+triage_tests.py,338,launch,"(result_images, source)","Launch the GUI.
+
+
+"
+test_type1font.py,6,test_Type1Font,(),
+
+demo_axes_grid2.py,19,add_inner_title,"(ax, title, loc, **kwargs)",
+
+test_constrainedlayout.py,391,test_hidden_axes,(),
+missing_references.py,284,setup,(app),
+
+inset_locator1.py,604,mark_inset,"(parent_axes, inset_axes, loc1, loc2, **kwargs)","Draw a box to mark the location of an area represented by an inset axes.
+
+This function draws a box in *parent_axes* at the bounding box of *inset_axes*, and shows a connection with the inset axes by drawing lines at the corners, giving a ""zoomed in"" effect.
+
+Parameters ---------- parent_axes : `matplotlib.axes.Axes` Axes which contains the area of the inset axes.
+
+inset_axes : `matplotlib.axes.Axes` The inset axes.
+
+loc1, loc2 : {1, 2, 3, 4} Corners to use for connecting the inset axes and the area in the parent axes.
+
+**kwargs Patch properties for the lines and box drawn:
+
+%(Patch)s
+##### Returns
+* **pp **: `matplotlib.patches.Patch`
+    The patch drawn to represent the area of the inset axes.
+
+* **p1, p2 **: `matplotlib.patches.Patch`
+    The patches connecting two corners of the inset axes and its area.
+
+"
+confidence_ellipse.py,104,get_correlated_dataset,"(n, dependency, mu, scale)",
+
+scatter3d.py,16,randrange,"(n, vmin, vmax)","Helper function to make an array of random numbers having shape (n, ) with each number distributed Uniform(vmin, vmax).
+
+
+"
+
+fahrenheit_celsius_scales.py,21,make_plot,(),
+test_backend_qt.py,282,test_canvas_reinit,(),
+pong_sgskip.py,35,start_anim,(event),
+usetex_baseline_test.py,37,test_window_extent,"(ax, usetex, preview)",
+
+
+
+test_axisartist_angle_helper.py,114,test_formatters,"(Formatter, regex, direction, factor, values)",
+
+
+
+image_annotated_heatmap.py,297,func,"(x, pos)",
+backend_qt5.py,138,_allow_super_init,(__init__),"Decorator for ``__init__`` to allow ``super().__init__`` on PyQt4/PySide2.
+
+
+"
+
+image_transparency_blend.py,24,normal_pdf,"(x, mean, var)",
+
+test_sphinxext.py,14,test_tinypages,(tmpdir),
+test_axisartist_floating_axes.py,76,test_curvelinear4,(),
+clip_path2.py,80,clip_line_to_rect,"(xline, yline, bbox)",
+
+
+image_zcoord.py,27,format_coord,"(x, y)",
+range6.py,9,range6,(),"The function that should be executed.
+
+
+"
+
+
+inset_locator_demo2.py,40,add_sizebar,"(ax, size)",
+legend1.py,1161,_parse_legend_args,"(axs, **kwargs)","Get the handles and labels from the calls to either ``figure.legend`` or ``axes.legend``.
+
+``axs`` is a list of axes (to get legend artists from)
+"
+cm.py,177,get_cmap,"(name, lut)","Get a colormap instance, defaulting to rc values if *name* is None.
+
+Colormaps added with :func:`register_cmap` take precedence over built-in colormaps.
+
+Notes ----- Currently, this returns the global colormap object, which is deprecated. In Matplotlib 3.5, you will no longer be able to modify the global colormaps in-place.
+
+Parameters ---------- name : `matplotlib.colors.Colormap` or str or None, default: None If a `.Colormap` instance, it will be returned. Otherwise, the name of a colormap known to Matplotlib, which will be resampled by *lut*. The default, None, means :rc:`image.cmap`. lut : int or None, default: None If *name* is not already a Colormap instance and *lut* is not None, the colormap will be resampled to have *lut* entries in the lookup table.
+"
+
+backend_bases.py,2613,button_press_handler,"(event, canvas, toolbar)","The default Matplotlib button actions for extra mouse buttons.
+
+Parameters are as for `key_press_handler`, except that *event* is a `MouseEvent`.
+"
+
+test_animation.py,233,test_funcanimation_cache_frame_data,(cache_frame_data),
+
+
+
+
+
+
+
+simple_anchored_artists.py,61,draw_sizebar,(ax),"Draw a horizontal bar with length of 0.1 in data coordinates, with a fixed label underneath.
+
+
+"
+pyplot_two_subplots.py,12,f,(t),
+legend_handler.py,37,update_from_first_child,"(tgt, src)",
+
+
+angle_helper2.py,137,select_step360,"(v1, v2, nv, include_last, threshold_factor)",
+art3d.py,791,_zalpha,"(colors, zs)","Modify the alphas of the color list according to depth.
+
+
+"
+
+disable_internet.py,137,no_internet,(verbose),"Temporarily disables internet access (if not already disabled).
+
+If it was already disabled before entering the context manager (i.e. `turn_off_internet` was called previously) then this is a no-op and leaves internet access disabled until a manual call to `turn_on_internet`.
+"
+test_ttconv.py,11,test_truetype_conversion,(recwarn),
+polys3d.py,19,polygon_under_graph,"(xlist, ylist)","Construct the vertex list which defines the polygon filling the space under the (xlist, ylist) line graph.  Assumes the xs are in ascending order.
+
+
+"
+voxels_torus.py,14,midpoints,(x),
+bmh.py,22,plot_beta_hist,"(ax, a, b)",
+
+pick_event_demo2.py,26,onpick,(event),
+demo_curvelinear_grid.py,61,curvelinear_test2,(fig),"Polar projection, but in a rectangular box.
+
+
+"
+
+
+test_patches.py,525,test_rotated_arcs,(),
+demo_gridspec01.py,14,annotate_axes,(fig),
+test_offsetbox.py,244,test_annotationbbox_extents,(),
+backend_wx.py,1092,_set_frame_icon,(frame),
+
+
+
+
+
+test_subplots.py,169,test_dont_mutate_kwargs,(),
+streamplot.py,666,_gen_starting_points,(shape),"Yield starting points for streamlines.
+
+Trying points on the boundary first gives higher quality streamlines. This algorithm starts with a point on the mask corner and spirals inward. This algorithm is inefficient, but fast compared to rest of streamplot.
+"
+hatch.py,184,get_path,"(hatchpattern, density)","Given a hatch specifier, *hatchpattern*, generates Path to render the hatch in a unit square.  *density* is the number of lines per unit square.
+
+
+"
+
+
+
+
+test_scale.py,193,test_function_scale,(),
+
+hatch_style_reference.py,17,hatches_plot,"(ax, h)",
+
+axes_size1.py,223,from_any,"(size, fraction_ref)","Create a Fixed unit when the first argument is a float, or a Fraction unit if that is a string that ends with %. The second argument is only meaningful when Fraction unit is created.
+
+>>> a = Size.from_any(1.2) # => Size.Fixed(1.2) >>> Size.from_any(""50%"", a) # => Size.Fraction(0.5, a)
+"
+
+axis_direction_demo_step04.py,11,setup_axes,"(fig, rect)",
+test_backend_pdf.py,269,test_empty_rasterized,(),
+test_mplot3d.py,979,test_equal_box_aspect,(),
+
+
+
+test_skew.py,149,test_skew_rectangle,(),
+
+anatomy.py,67,text,"(x, y, text)",
+zoom_window.py,38,on_press,(event),
+mlab.py,912,cohere,"(x, y, NFFT, Fs, detrend, window, noverlap, pad_to, sides, scale_by_freq)","The coherence between *x* and *y*.  Coherence is the normalized cross spectral density
+
+.. math::
+
+C_{xy} = \frac{|P_{xy}|^2}{P_{xx}P_{yy}}
+
+Parameters ---------- x, y Array or sequence containing the data
+
+%(Spectral)s
+
+%(PSD)s
+
+noverlap : int The number of points of overlap between blocks.
+
+The default value is 0 (no overlap).
+##### Returns
+* **Cxy **: 1-D array
+    The coherence vector.
+
+* **freqs **: 1-D array
+        The frequencies for the elements in *Cxy*.
+
+* ****: func
+
+"
+
+test_lines.py,263,test_odd_dashes,"(fig_test, fig_ref)",
+
+
+
+test_cycles.py,134,test_invalid_input_forms,(),
+
+
+image.py,1659,thumbnail,"(infile, thumbfile, scale, interpolation, preview)","Make a thumbnail of image in *infile* with output filename *thumbfile*.
+
+See :doc:`/gallery/misc/image_thumbnail_sgskip`.
+
+Parameters ---------- infile : str or file-like The image file. Matplotlib relies on Pillow_ for image reading, and thus supports a wide range of file formats, including PNG, JPG, TIFF and others.
+
+.. _Pillow: https://python-pillow.org/
+
+thumbfile : str or file-like The thumbnail filename.
+
+scale : float, default: 0.1 The scale factor for the thumbnail.
+
+interpolation : str, default: 'bilinear' The interpolation scheme used in the resampling. See the *interpolation* parameter of `~.Axes.imshow` for possible values.
+
+preview : bool, default: False If True, the default backend (presumably a user interface backend) will be used which will cause a figure to be raised if `~matplotlib.pyplot.show` is called.
+
+If it is False, the figure is created using `.FigureCanvasBase` and the drawing backend is selected as `.Figure.savefig` would normally do.
+##### Returns
+"
+gridspec_nested.py,14,format_axes,(fig),
+font_manager.py,1421,_load_fontmanager,(),
+
+ginput_manual_clabel_sgskip.py,63,f,"(x, y, pts)",
+pcolormesh_grids.py,42,_annotate,"(ax, x, y, title)",
+
+
+mock_gui_toolkits.py,9,setup,(app),
+
+
+
+
+
+demo_axes_grid.py,92,demo_grid_with_each_cbar_labelled,(fig),"A grid of 2x2 images. Each image has its own colorbar.
+
+
+"
+tick_labels_from_values.py,28,format_fn,"(tick_val, tick_pos)",
+
+test_agg.py,240,test_pil_kwargs_tiff,(),
+artist.py,1643,kwdoc,(artist),"Inspect an `~matplotlib.artist.Artist` class (using `.ArtistInspector`) and return information about its settable properties and their current values.
+
+Parameters ---------- artist : `~matplotlib.artist.Artist` or an iterable of `Artist`\s
+##### Returns
+* **str
+    The settable properties of *artist*, as plain text if
+    **: rc
+
+"
+
+boilerplate.py,334,build_pyplot,(pyplot_path),
+integral.py,20,func,(x),
+backend_ps.py,1242,pstoeps,"(tmpfile, bbox, rotated)","Convert the postscript to encapsulated postscript.  The bbox of the eps file will be replaced with the given *bbox* argument. If None, original bbox will be used.
+
+
+"
+
+
+test_backend_tools.py,19,test_format_shortcut,"(rc_shortcut, expected)",
+test_dates.py,984,test_change_interval_multiples,(),
+
+
+polar.py,711,_is_full_circle_rad,"(thetamin, thetamax)","Determine if a wedge (in radians) spans the full circle.
+
+The condition is derived from :class:`~matplotlib.patches.Wedge`.
+"
+
+
+zoom_inset_axes.py,14,get_demo_image,(),
+
+test_cbook.py,664,test_setattr_cm,(),
+
+
+
+
+span_selector.py,30,onselect,"(xmin, xmax)",
+
+
+
+axes_margins.py,18,f,(t),
+
+custom_roles.py,28,setup,(app),
+tight_layout_guide.py,35,example_plot,"(ax, fontsize)",
+
+
+
+connectionstyle_demo.py,14,demo_con_style,"(ax, connectionstyle)",
+qt_compat.py,207,_setDevicePixelRatioF,"(obj, val)","Call obj.setDevicePixelRatioF(val) with graceful fallback for older Qt.
+
+This can be replaced by the direct call when we require Qt>=5.6.
+"
+_backend_tk.py,47,blit,"(photoimage, aggimage, offsets, bbox)","Blit *aggimage* to *photoimage*.
+
+*offsets* is a tuple describing how to fill the ``offset`` field of the ``Tk_PhotoImageBlock`` struct: it should be (0, 1, 2, 3) for RGBA8888 data, (2, 1, 0, 3) for little-endian ARBG32 (i.e. GBRA8888) data and (1, 2, 3, 0) for big-endian ARGB32 (i.e. ARGB8888) data.
+
+If *bbox* is passed, it defines the region that gets blitted.
+"
+fancybox_demo.py,43,draw_control_points_for_patches,(ax),
+
+
+
+test_axisartist_axislines.py,64,test_ParasiteAxesAuxTrans,(),
+
+test_rcparams.py,494,test_backend_fallback_headful,(tmpdir),
+
+
+custom_ticker1.py,19,millions,"(x, pos)","The two args are the value and tick position.
+
+
+"
+mathmpl.py,92,setup,(app),
+afm.py,326,_parse_optional,(fh),"Parse the optional fields for kern pair data and composites.
+
+
+##### Returns
+* **kern_data **: dict
+    A dict containing kerning information. May be empty.
+    See `._parse_kern_pairs`.
+
+* **composites **: dict
+    A dict containing composite information. May be empty.
+    See `._parse_composites`.
+
+"
+test_colors.py,1160,test_repr_html,(),
+test_axisartist_grid_helper_curvelinear.py,147,test_axis_direction,(),
+test_png.py,44,test_truncated_buffer,(),
+
+
+colors2.py,2147,from_levels_and_colors,"(levels, colors, extend)","A helper routine to generate a cmap and a norm instance which behave similar to contourf's levels and colors arguments.
+
+Parameters ---------- levels : sequence of numbers The quantization levels used to construct the `BoundaryNorm`. Value ``v`` is quantized to level ``i`` if ``lev[i] <= v < lev[i+1]``. colors : sequence of colors The fill color to use for each level. If *extend* is ""neither"" there must be ``n_level
+
+- 1`` colors. For an *extend* of ""min"" or ""max"" add one extra color, and for an *extend* of ""both"" add two colors. extend : {'neither', 'min', 'max', 'both'}, optional The behaviour when a value falls out of range of the given levels. See `~.Axes.contourf` for details.
+##### Returns
+* **cmap **: `~matplotlib.colors.Normalize`
+
+* **norm **: `~matplotlib.colors.Colormap`
+
+"
+backend_nbagg.py,28,connection_info,(),"Return a string showing the figure and connection status for the backend.
+
+This is intended as a diagnostic tool, and not for general use.
+"
+text_intro.py,357,formatoddticks,"(x, pos)","Format odd tick positions.
+
+
+"
+whats_new_99_axes_grid.py,28,get_rgb,(),
+
+
+simple_axis_pad.py,79,ann,"(ax1, d)",
+
+
+rcsetup.py,1066,_convert_validator_spec,"(key, conv)",
+patches.py,2786,_point_along_a_line,"(x0, y0, x1, y1, d)","Return the point on the line connecting (*x0*, *y0*) -- (*x1*, *y1*) whose distance from (*x0*, *y0*) is *d*.
+
+
+"
+check_buttons.py,36,func,(label),
+
+bayes_update.py,19,beta_pdf,"(x, a, b)",
+animation.py,773,_embedded_frames,"(frame_list, frame_format)","frame_list should be a list of base64-encoded png files
+
+
+"
+test_testing.py,20,test_wrap_failure,(),
+backend_agg.py,52,get_hinting_flag,(),
+
+imshow_extent.py,135,generate_imshow_demo_grid,"(extents, xlim, ylim)",
+
+
+
+
+linestyles.py,44,plot_linestyles,"(ax, linestyles, title)",
+demo_ticklabel_direction.py,12,setup_axes,"(fig, rect)",
+
+
+gradient_bar.py,59,gradient_bar,"(ax, x, y, width, bottom)",
+
+
+demo_edge_colorbar.py,56,demo_right_cbar,(fig),"A grid of 2x2 images. Each row has its own colorbar.
+
+
+"
+
+
+
+
+
+test_triangulation.py,1144,test_tricontour_non_finite_z,(),
+patheffects.py,166,_subclass_with_normal,(effect_class),"Create a PathEffect class combining *effect_class* and a normal draw.
+
+
+"
+tripcolor.py,9,tripcolor,"(ax, **kwargs)","Create a pseudocolor plot of an unstructured triangular grid.
+
+The triangulation can be specified in one of two ways; either::
+
+tripcolor(triangulation, ...)
+
+where triangulation is a `.Triangulation` object, or
+
+::
+
+tripcolor(x, y, ...) tripcolor(x, y, triangles, ...) tripcolor(x, y, triangles=triangles, ...) tripcolor(x, y, mask=mask, ...) tripcolor(x, y, triangles, mask=mask, ...)
+
+in which case a Triangulation object will be created.
+
+See `.Triangulation` for a explanation of these possibilities.
+
+The next argument must be *C*, the array of color values, either one per point in the triangulation if color values are defined at points, or one per triangle in the triangulation if color values are defined at triangles. If there are the same number of points and triangles in the triangulation it is assumed that color values are defined at points; to force the use of color values at triangles use the kwarg ``facecolors=C`` instead of just ``C``.
+
+*shading* may be 'flat' (the default) or 'gouraud'. If *shading* is 'flat' and C values are defined at points, the color values used for each triangle are from the mean C of the triangle's three points. If *shading* is 'gouraud' then color values must be defined at points.
+
+The remaining kwargs are the same as for `~.Axes.pcolor`.
+"
+core.py,231,reload_library,(),"Reload the style library.
+
+
+"
+
+
+test_backend_bases.py,107,test_interactive_zoom,(),
+test_fontconfig_pattern.py,47,test_fontconfig_str,(),"Test FontProperties string conversions for correctness.
+
+
+"
+
+
+
+
+
+
+rectangle_selector.py,31,toggle_selector,(event),
+test_axisartist_axis_artist.py,80,test_axis_artist,(),
+
+test_compare_images.py,45,test_image_comparison_expect_rms,"(im1, im2, tol, expect_rms)","Compare two images, expecting a particular RMS error.
+
+im1 and im2 are filenames relative to the baseline_dir directory.
+
+tol is the tolerance to pass to compare_images.
+
+expect_rms is the expected RMS value, or None. If None, the test will succeed if compare_images succeeds. Otherwise, the test will succeed if compare_images fails and returns an RMS error almost equal to this value.
+"
+
+
+
+gh_api.py,265,post_download,"(project, filename, name, description)","Upload a file to the GitHub downloads area
+
+
+"
+
+
+pylab_with_gtk_sgskip.py,49,update,(event),
+
+
+_subplots.py,229,_picklable_subplot_class_constructor,(axes_class),"Stub factory that returns an empty instance of the appropriate subplot class when called with an axes class. This is purely to allow pickling of Axes and Subplots.
+
+
+"
+
+
+
+
+
+
+
+multiple_yaxis_with_spines.py,18,make_patch_spines_invisible,(ax),
+
+
+
+test_arrow_patches.py,150,test_invalid_intersection,(),
+
+rain.py,45,update,(frame_number),
+test_bbox_tight.py,115,test_noop_tight_bbox,(),
+figure.py,2804,figaspect,(arg),"Calculate the width and height for a figure with a specified aspect ratio.
+
+While the height is taken from :rc:`figure.figsize`, the width is adjusted to match the desired aspect ratio. Additionally, it is ensured that the width is in the range [4., 16.] and the height is in the range [2., 16.]. If necessary, the default height is adjusted to ensure this.
+
+Parameters ---------- arg : float or 2d array If a float, this defines the aspect ratio (i.e. the ratio height / width). In case of an array the aspect ratio is number of rows / number of columns, so that the array could be fitted in the figure undistorted.
+##### Returns
+* **Make a figure twice as tall as it is wide**: 
+
+* **Make a figure with the proper aspect for an array**: 
+
+"
+
+
+
+deprecation.py,494,_suppress_matplotlib_deprecation_warning,(),
+
+
+
+font_table.py,52,draw_font_table,(path),"Draw a font table of the first 255 chars of the given font.
+
+Parameters ---------- path : str or None The path to the font file.
+
+If None, use Matplotlib's default font.
+"
+
+test_axisartist_clip_path.py,10,test_clip_path,(),
+
+
+demo_ticklabel_alignment.py,13,setup_axes,"(fig, rect)",
+axis_direction_demo_step01.py,11,setup_axes,"(fig, rect)",
+arrow_demo.py,26,make_arrow_plot,"(data, size, display, shape, max_arrow_width, arrow_sep, alpha, normalize_data, ec, labelcolor, head_starts_at_zero, rate_labels, **kwargs)","Makes an arrow plot.
+
+Parameters ---------- data Dict with probabilities for the bases and pair transitions. size Size of the graph in inches. display : {'length', 'width', 'alpha'} The arrow property to change. shape : {'full', 'left', 'right'} For full or half arrows. max_arrow_width : float Maximum width of an arrow, data coordinates. arrow_sep : float Separation between arrows in a pair, data coordinates. alpha : float Maximum opacity of arrows. **kwargs Can be anything allowed by a Arrow object, e.g. *linewidth* or *edgecolor*.
+"
+tricontour_smooth_user.py,18,function_z,"(x, y)",
+demo_axes_rgb.py,48,demo_rgb2,(),
+text.py,66,_get_textbox,"(text, renderer)","Calculate the bounding box of the text. Unlike :meth:`matplotlib.text.Text.get_extents` method, The bbox size of the text before the rotation is calculated.
+
+
+"
+axes_grid1.py,15,_tick_only,"(ax, bottom_on, left_on)",
+
+
+backend_wxagg.py,58,_convert_agg_to_wx_bitmap,"(agg, bbox)","Convert the region of the agg buffer bounded by bbox to a wx.Bitmap.  If bbox is None, the entire buffer is converted. Note: agg must be a backend_agg.RendererAgg instance.
+
+
+"
+donut.py,23,make_circle,(r),
+affine_image.py,31,do_plot,"(ax, Z, transform)",
+demo_floating_axes.py,88,setup_axes3,"(fig, rect)","Sometimes, things like axis_direction need to be adjusted.
+
+
+"
+
+
+
+
+
+docstring.py,77,dedent_interpd,(func),"Dedent *func*'s docstring, then interpolate it with ``interpd``.
+
+
+"
+
+
+
+_base.py,88,_process_plot_format,(fmt),"Convert a MATLAB style color/line style format string to a (*linestyle*, *marker*, *color*) tuple.
+
+Example format strings include:
+
+* 'ko': black circles * '.b': blue dots * 'r--': red dashed lines * 'C2--': the third color in the color cycle, dashed lines
+
+See Also -------- matplotlib.Line2D.lineStyles, matplotlib.colors.cnames All possible styles and color format strings.
+"
+
+test_backend_nbagg.py,13,test_ipynb,(),
+
+animate_decay.py,38,run,(data),
+
+
+legend_picking.py,30,on_pick,(event),
+
+logos2.py,109,make_logo,"(height_px, lw_bars, lw_grid, lw_border, rgrid, with_text)","Create a full figure with the Matplotlib logo.
+
+Parameters ---------- height_px : int Height of the figure in pixel. lw_bars : float The linewidth of the bar border. lw_grid : float The linewidth of the grid. lw_border : float The linewidth of icon border. rgrid : sequence of float The radial grid positions. with_text : bool Whether to draw only the icon or to include 'matplotlib' as text.
+"
+findobj_demo.py,29,myfunc,(x),
+backend_webagg_core.py,89,_handle_key,(key),"Handle key codes
+
+
+"
+
+dates.py,1787,date_ticker_factory,"(span, tz, numticks)","Create a date locator with *numticks* (approx) and a date formatter for *span* in days.  Return value is (locator, formatter).
+
+
+"
+ticker.py,2368,is_close_to_int,(x),
+
+transforms.py,2893,offset_copy,"(trans, fig, x, y, units)","Return a new transform with an added offset.
+
+Parameters ---------- trans : `Transform` subclass Any transform, to which offset will be applied. fig : `~matplotlib.figure.Figure`, default: None Current figure. It can be None if *units* are 'dots'. x, y : float, default: 0.0 The offset to apply. units : {'inches', 'points', 'dots'}, default: 'inches' Units of the offset.
+##### Returns
+"
+
+axes_divider1.py,746,make_axes_area_auto_adjustable,"(ax, use_axes, pad, adjust_dirs)",
+
+
+github.py,154,setup,(app),"Install the plugin.
+
+param app: Sphinx application context.
+"
+unchained.py,57,update,(),
+backend_tools.py,1086,add_tools_to_container,"(container, tools)","Add multiple tools to the container.
+
+Parameters ---------- container : Container `backend_bases.ToolContainerBase` object that will get the tools added. tools : list, optional List in the form ``[[group1, [tool1, tool2 ...]], [group2, [...]]]`` where the tools ``[tool1, tool2, ...]`` will display in group1. See `add_tool` for details.
+"
+
+
+
+figure_axes_enter_leave.py,30,on_leave_figure,(event),
+demo_constrained_layout.py,18,example_plot,(ax),
+trigradient_demo.py,19,dipole_potential,"(x, y)","The electric dipole potential V, at position *x*, *y*.
+
+
+"
+
+
+scatter_hist.py,35,scatter_hist,"(x, y, ax, ax_histx, ax_histy)",
+demo_curvelinear_grid2.py,23,curvelinear_test1,(fig),"Grid for custom transform.
+
+
+"
+
+backend_pdf.py,417,_paint_path,"(fill, stroke)","Return the PDF operator to paint a path.
+
+Parameters ---------- fill: bool Fill the path with the fill color. stroke: bool Stroke the outline of the path with the line color.
+"
+
+quiver.py,436,_check_consistent_shapes,(),
+test_polar.py,344,test_thetalim_valid_invalid,(),
+
+
+conftest2.py,127,pd,(),"Fixture to import and configure pandas.
+
+
+"
+
+named_colors.py,22,plot_colortable,"(colors, title, sort_colors, emptycols)",
+
+lines.py,113,_mark_every_path,"(markevery, tpath, affine, ax_transform)","Helper function that sorts out how to deal the input `markevery` and returns the points where markers should be drawn.
+
+Takes in the `markevery` value and the line path and returns the sub-sampled path.
+"
+offsetbox.py,137,_get_aligned_offsets,"(hd_list, height, align)","Given a list of (height, descent) of each boxes, align the boxes with *align* and calculate the y-offsets of each boxes. total width and the offset positions of each items according to *mode*. xdescent is analogous to the usual descent, but along the x-direction. xdescent values are currently ignored.
+
+Parameters ---------- hd_list List of (height, xdescent) of boxes to be aligned. height : float or None Intended total length. If None, the maximum of the heights in *hd_list* is used. align : {'baseline', 'left', 'top', 'right', 'bottom', 'center'} Align mode.
+"
+
+spine_placement_demo.py,65,adjust_spines,"(ax, spines)",
+axis3d.py,22,tick_update_position,"(tick, tickxs, tickys, labelpos)","Update tick line and label position and style.
+
+
+"
+
+
+
+
+stackplot_demo.py,52,gaussian_mixture,"(x, n)","Return a random mixture of *n* Gaussians, evaluated at positions *x*.
+
+
+"
+
+
+
+basic_units.py,370,cos,(x),
+
+
+
+test_image.py,1092,test_exact_vmin,(),
+mixed_subplots.py,13,f,(t),
+UnitDblConverter.py,15,rad_fn,"(x, pos)","Radian function formatter.
+
+
+"
+
+
+
+test_matplotlib.py,28,test_use_doc_standard_backends,(),"Test that the standard backends mentioned in the docstring of matplotlib.use() are the same as in matplotlib.rcsetup.
+
+
+"
+
+usetex_fonteffects.py,13,setfont,(font),
+
+constrainedlayout_guide.py,416,docomplicated,(suptitle),
+sankey_links.py,27,corner,(sankey),"Generate a corner link.
+
+
+"
+
+
+colorbar1.py,781,colorbar,"(mappable, cax, ax, **kw)","Create a colorbar for a ScalarMappable instance.
+
+Documentation for the pyplot thin wrapper:
+
+%s
+"
+
+boxplot_demo.py,194,fake_bootstrapper,(n),"This is just a placeholder for the user's method of bootstrapping the median and its confidence intervals.
+
+
+"
+
+
+custom_boxstyle01.py,28,custom_box_style,"(x0, y0, width, height, mutation_size, mutation_aspect)","Given the location and size of the box, return the path of the box around it.
+
+Rotation is automatically taken care of.
+
+Parameters ---------- x0, y0, width, height : float Box location and size. mutation_size : float Mutation reference scale, typically the text font size. mutation_aspect Mutation aspect ratio.
+"
+test_pyplot.py,79,test_nrows_error,(),
+scale.py,670,_get_scale_docs,(),"Helper function for generating docstrings related to scales.
+
+
+"
+test_axes_grid.py,56,test_imagegrid,(),
+fill.py,19,koch_snowflake,"(order, scale)","Return two lists x, y of point coordinates of the Koch snowflake.
+
+Parameters ---------- order : int The recursion depth. scale : float The extent of the snowflake (edge length of the base triangle).
+"
+dviread.py,1089,_fontfile,"(cls, suffix, texname)",
+
+
+
+test_texmanager.py,5,test_fontconfig_preamble,(),"Test that the preamble is included in _fontconfig
+
+
+"
+
+
+style_sheets_reference.py,102,plot_figure,(style_label),"Setup and plot the demonstration figure with a given style.
+
+
+"
+
+radio_buttons.py,50,stylefunc,(label),
+
+colormaps.py,366,plot_color_gradients,"(cmap_category, cmap_list)",
+
+
+
+
+test_streamplot.py,102,test_streamplot_limits,(),
+
+
+
+
+coords_report.py,13,millions,(x),
+_constrained_layout.py,541,layoutcolorbargridspec,"(parents, cax, shrink, aspect, location, pad)","Do the layout for a colorbar, to not overly pollute colorbar.py
+
+*pad* is in fraction of the original axis size.
+"
+
+trifinder_event_demo.py,26,on_mouse_move,(event),
+mpl_with_glade3_sgskip.py,24,main,(),
+pathpatch3d.py,17,text3d,"(ax, xyz, s, zdir, size, angle, usetex, **kwargs)","Plots the string 's' on the axes 'ax', with position 'xyz', size 'size', and rotation angle 'angle'.  'zdir' gives the axis which is to be treated as the third dimension.  usetex is a boolean indicating whether the string should be interpreted as latex or not.  Any additional keyword arguments are passed on to transform_path.
+
+Note: zdir affects the interpretation of xyz.
+"
+cache_zenodo_svg.py,49,_get_xdg_cache_dir,(),"Return the XDG cache directory.
+
+See https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+"
+test_units.py,169,test_subclass,"(fig_test, fig_ref)",
+
+
+
+
+
+axis_direction_demo_step02.py,11,setup_axes,"(fig, rect)",
+align_ylabels.py,14,make_plot,(axs),
+rainbow_text.py,30,rainbow_text,"(x, y, strings, colors, orientation, ax, **kwargs)","Take a list of *strings* and *colors* and place them next to each other, with text strings[i] being shown in colors[i].
+
+Parameters ---------- x, y : float Text position in data coordinates. strings : list of str The strings to draw. colors : list of color The colors to use. orientation : {'horizontal', 'vertical'} ax : Axes, optional The Axes to draw into. If None, the current axes will be used. **kwargs All other keyword arguments are passed to plt.text(), so you can set the font size, family, etc.
+"
+
+
+dynamic_image.py,15,f,"(x, y)",
+
+table.py,646,table,"(ax, cellText, cellColours, cellLoc, colWidths, rowLabels, rowColours, rowLoc, colLabels, colColours, colLoc, loc, bbox, edges, **kwargs)","Add a table to an `~.axes.Axes`.
+
+At least one of *cellText* or *cellColours* must be specified. These parameters must be 2D lists, in which the outer lists define the rows and the inner list define the column values per row. Each row must have the same number of elements.
+
+The table can optionally have row and column headers, which are configured using *rowLabels*, *rowColours*, *rowLoc* and *colLabels*, *colColours*, *colLoc* respectively.
+
+For finer grained control over tables, use the `.Table` class and add it to the axes with `.Axes.add_table`.
+
+Parameters ---------- cellText : 2D list of str, optional The texts to place into the table cells.
+
+*Note*: Line breaks in the strings are currently not accounted for and will result in the text exceeding the cell boundaries.
+
+cellColours : 2D list of colors, optional The background colors of the cells.
+
+cellLoc : {'left', 'center', 'right'}, default: 'right' The alignment of the text within the cells.
+
+colWidths : list of float, optional The column widths in units of the axes. If not given, all columns will have a width of *1 / ncols*.
+
+rowLabels : list of str, optional The text of the row header cells.
+
+rowColours : list of colors, optional The colors of the row header cells.
+
+rowLoc : {'left', 'center', 'right'}, default: 'left' The text alignment of the row header cells.
+
+colLabels : list of str, optional The text of the column header cells.
+
+colColours : list of colors, optional The colors of the column header cells.
+
+colLoc : {'left', 'center', 'right'}, default: 'left' The text alignment of the column header cells.
+
+loc : str, optional The position of the cell with respect to *ax*. This must be one of the `~.Table.codes`.
+
+bbox : `.Bbox`, optional A bounding box to draw the table into. If this is not *None*, this overrides *loc*.
+
+edges : substring of 'BRTL' or {'open', 'closed', 'horizontal', 'vertical'} The cell edges to be drawn with a line. See also `~.Cell.visible_edges`.
+##### Returns
+"
+mathtext_wx_sgskip.py,28,mathtext_to_wxbitmap,(s),
+
+
+
+
+
+
+close_event.py,11,on_close,(event),
+
+
+
+subset.py,360,main,(argv),
+
+advanced_hillshading.py,56,shade_other_data,(),"Demonstrates displaying different variables through shade and color.
+
+
+"
+test_backends_interactive.py,166,test_webagg,(),
+
+scales.py,84,inverse,(a),
+
+
+_layoutbox.py,655,plot_children,"(fig, box, level, printit)","Simple plotting to show where boxes are.
+
+
+"
+
+
+
+
+
+date_index_formatter.py,32,format_date,"(x, pos)",
+
+
+
+lorenz_attractor.py,21,lorenz,"(x, y, z, s, r, b)","Given: x, y, z: a point of interest in three dimensional space s, r, b: parameters defining the lorenz attractor Returns: x_dot, y_dot, z_dot: values of the lorenz attractor's partial derivatives at the point x, y, z
+
+
+"
+test_backend_svg.py,375,test_svg_metadata,(),
+bezier.py,614,concatenate_paths,(paths),"Concatenate a list of paths into a single path.
+
+
+"
+
+test_legend.py,638,test_no_warn_big_data_when_loc_specified,(),
+test_widgets.py,322,test_polygon_selector,(),
+backend_gtk3.py,902,error_msg_gtk,"(msg, parent)",
+
+test_backend_pgf.py,322,test_bbox_inches_tight,(tmpdir),
+plot_directive.py,613,run,"(arguments, content, options, state_machine, state, lineno)",
+test_backend_ps.py,130,test_partial_usetex,(caplog),
+stackplot.py,16,stackplot,"(axes, x, **kwargs)","Draw a stacked area plot.
+
+Parameters ---------- x : 1d array of dimension N
+
+y : 2d array (dimension MxN), or sequence of 1d arrays (each dimension 1xN)
+
+The data is assumed to be unstacked. Each of the following calls is legal::
+
+stackplot(x, y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+ # where y is MxN stackplot(x, y1, y2, y3, y4)
+
+# where y1, y2, y3, y4, are all 1xNm
+
+baseline : {'zero', 'sym', 'wiggle', 'weighted_wiggle'} Method used to calculate the baseline:
+
+- ``'zero'``: Constant zero baseline, i.e. a simple stacked plot.
+
+- ``'sym'``:
+
+Symmetric around zero and is sometimes called 'ThemeRiver'.
+
+- ``'wiggle'``: Minimizes the sum of the squared slopes.
+
+- ``'weighted_wiggle'``: Does the same but weights to account for size of each layer. It is also called 'Streamgraph'-layout. More details can be found at http://leebyron.com/streamgraph/.
+
+labels : Length N sequence of strings Labels to assign to each data series.
+
+colors : Length N sequence of colors A list or tuple of colors. These will be cycled through and used to colour the stacked areas.
+
+**kwargs All other keyword arguments are passed to `.Axes.fill_between`.
+##### Returns
+"
+anchored_artists.py,107,draw_sizebar,(ax),"Draw a horizontal bar with length of 0.1 in data coordinates, with a fixed label underneath.
+
+
+"
+demo_axis_direction.py,66,add_floating_axis2,(ax1),
+demo_floating_axis.py,21,curvelinear_test2,(fig),"Polar projection, but in a rectangular box.
+
+
+"
+mandelbrot.py,16,mandelbrot_set,"(xmin, xmax, ymin, ymax, xn, yn, maxiter, horizon)",
+_axes.py,40,_make_inset_locator,"(bounds, trans, parent)","Helper function to locate inset axes, used in `.Axes.inset_axes`.
+
+A locator gets used in `Axes.set_aspect` to override the default locations...
+
+It is a function that takes an axes object and a renderer and tells `set_aspect` where it is to be placed.
+
+Here *rect* is a rectangle [l, b, w, h] that specifies the location for the axes in the transform given by *trans* on the *parent*.
+"
+
+
+
+
+
+
+
+_internal_utils.py,15,graphviz_dump_transform,"(transform, dest)","Generate a graphical representation of the transform tree for *transform* using the :program:`dot` program (which this function depends on).  The output format (png, dot, etc.) is determined from the suffix of *dest*.
+
+Parameters ---------- transform : `~matplotlib.transform.Transform` The represented transform. dest : str Output filename.
+
+The extension must be one of the formats supported by :program:`dot`, e.g. png, svg, dot, ... (see https://www.graphviz.org/doc/info/output.html). highlight : list of `~matplotlib.transform.Transform` or None The transforms in the tree to be drawn in bold. If *None*, *transform* is highlighted.
+"
+demo_ribbon_box.py,62,main,(),
+embedding_webagg_sgskip.py,37,create_figure,(),"Creates a simple example figure.
+
+
+"
+mathtext_examples.py,58,doall,(),
+
+
+test_mlab.py,1699,test_psd_oversampling,(),"Test the case len(x) < NFFT for psd().
+
+
+"
+floating_axes2.py,364,floatingaxes_class_factory,(axes_class),
+test_figure.py,783,test_reused_gridspec,(),"Test that these all use the same gridspec
+
+
+"
+
+test_basic.py,37,test_lazy_imports,(),
+compare.py,433,save_diff_image,"(expected, actual, output)","Parameters ---------- expected : str File path of expected image. actual : str File path of actual image. output : str File path to save difference image to.
+
+
+"
+test_backend_tk.py,7,test_blit,(),
+
+
+
+figureoptions.py,31,figure_edit,"(axes, parent)","Edit matplotlib figure options
+
+
+"
+pie_and_donut_labels.py,45,func,"(pct, allvals)",
+
+
+test_font_manager.py,212,test_fork,(),
+simple_axis_direction03.py,12,setup_axes,"(fig, rect)",
+mathtext2.py,3469,math_to_image,"(s, filename_or_obj, prop, dpi, format)","Given a math expression, renders it in a closely-clipped bounding box to an image file.
+
+Parameters ---------- s : str A math expression.
+
+The math portion must be enclosed in dollar signs. filename_or_obj : str or path-like or file-like Where to write the image data. prop : `.FontProperties`, optional The size and style of the text. dpi : float, optional The output dpi.
+
+If not set, the dpi is determined as for `.Figure.savefig`. format : str, optional The output format, e.g., 'svg', 'pdf', 'ps' or 'png'.
+
+If not set, the format is determined as for `.Figure.savefig`.
+"
+_version.py,419,get_versions,(),
+auto_subplots_adjust.py,23,on_draw,(event),
+wire3d_animation_sgskip.py,17,generate,"(X, Y, phi)","Generates Z data for the points in the X, Y meshgrid and parameter phi.
+
+
+"
+
+
+demo_tight_layout.py,23,example_plot,(ax),
+tricontour_smooth_delaunay.py,35,experiment_res,"(x, y)","An analytic function representing experiment results.
+
+
+"
+
+
+
+test_pickle.py,198,test_unpickle_canvas,(),
+
+animated_histogram.py,68,animate,(i),
+
+test_determinism.py,124,test_determinism_source_date_epoch,"(fmt, string)","Test SOURCE_DATE_EPOCH support. Output a document with the environment variable SOURCE_DATE_EPOCH set to 2000-01-01 00:00 UTC and check that the document contains the timestamp that corresponds to this date (given as an argument).
+
+Parameters ---------- fmt : {""pdf"", ""ps"", ""svg""} Output format. string : bytes Timestamp string for 2000-01-01 00:00 UTC.
+"
+
+embedding_in_wx5_sgskip.py,46,demo,(),
+setupext.py,503,add_qhull_flags,(ext),
+
+
+grayscale.py,27,image_and_patch_example,(ax),
+
+test_quiver.py,252,test_quiver_setuvc_numbers,(),"Check that it is possible to set all arrow UVC to the same numbers
+
+
+"
+
+voxels_numpy_logo.py,12,explode,(data),
+
+colorbar2.py,1651,colorbar_factory,"(cax, mappable, **kwargs)","Create a colorbar on the given axes for the given mappable.
+
+.. note:: This is a low-level function to turn an existing axes into a colorbar axes.
+
+Typically, you'll want to use `~.Figure.colorbar` instead, which automatically handles creation and placement of a suitable axes as well.
+
+Parameters ---------- cax : `~matplotlib.axes.Axes` The `~.axes.Axes` to turn into a colorbar. mappable : `~matplotlib.cm.ScalarMappable` The mappable to be described by the colorbar. **kwargs Keyword arguments are passed to the respective colorbar class.
+##### Returns
+"
+axes_zoom_effect.py,81,zoom_effect02,"(ax1, ax2, **kwargs)","ax1 : the main axes ax1 : the zoomed axes
+
+Similar to zoom_effect01.
+
+The xmin & xmax will be taken from the ax1.viewLim.
+"
+test_ticker.py,1345,test_bad_locator_subs,(sub),
+test_agg_filter.py,9,test_agg_filter_alpha,(),
+
+mosaic.py,41,identify_axes,"(ax_dict, fontsize)","Helper to identify the Axes in the examples below.
+
+Draws the label in a large font in the center of the Axes.
+
+Parameters ---------- ax_dict : Dict[str, Axes] Mapping between the title / label and the Axes.
+
+fontsize : int, optional How big the label should be
+"
+
+
+decorators.py,477,_image_directories,(func),"Compute the baseline and result image directories for testing *func*.
+
+For test module ``foo.bar.test_baz``, the baseline directory is at ``foo/bar/baseline_images/test_baz`` and the result directory at ``$(pwd)/result_images/test_baz``.
+
+The result directory is created if it doesn't exist.
+"
+
+test_simplification.py,332,test_clipping_full,(),
+test_tightlayout.py,316,test_non_agg_renderer,"(monkeypatch, recwarn)",
+horizontal_barchart_distribution.py,32,survey,"(results, category_names)","Parameters ---------- results : dict A mapping from question labels to a list of answers per category. It is assumed all lists contain the same number of entries and that it matches the length of *category_names*. category_names : list of str The category labels.
+
+
+"
+textbox.py,28,submit,(expression),"Update the plotted function to the new math *expression*.
+
+*expression* is a string using ""t"" as its independent variable, e.g. ""t ** 3"".
+"
+
+
+
+
+
+backend_cairo.py,74,_cairo_font_args_from_font_prop,(prop),"Convert a `.FontProperties` or a `.FontEntry` to arguments that can be passed to `.Context.select_font_face`.
+
+
+"
+
+make_icons.py,94,make_icons,(),
+
+
+tick-formatters.py,79,major_formatter,"(x, pos)",
+test_style.py,174,test_xkcd_cm,(),
+
+
+
+
+
+memleak.py,15,run_memleak_test,"(bench, iterations, report)",
+test_colorbar.py,605,test_colorbar_int,(clim),
+path.py,1004,get_path_collection_extents,"(master_transform, paths, transforms, offsets, offset_transform)","Given a sequence of `Path`\s, `~.Transform`\s objects, and offsets, as found in a `~.PathCollection`, returns the bounding box that encapsulates all of them.
+
+Parameters ---------- master_transform : `~.Transform` Global transformation applied to all paths. paths : list of `Path` transforms : list of `~.Affine2D` offsets : (N, 2) array-like offset_transform : `~.Affine2D` Transform applied to the offsets before offsetting the path.
+
+Notes ----- The way that *paths*, *transforms* and *offsets* are combined follows the same method as for collections:
+
+Each is iterated over independently, so if you have 3 paths, 2 transforms and 1 offset, their combinations are as follows:
+
+(A, A, A), (B, B, A), (C, A, A)
+"
+pick_event_demo.py,163,pick_image,(),
+random_walk.py,39,update_lines,"(num, data_lines, lines)",
+
+
+
+
+skip_deprecated.py,13,setup,(app),
+
+
+demo_agg_filter.py,255,light_filter_pie,(ax),
+
+
+
+fontconfig_pattern.py,190,generate_fontconfig_pattern,(d),"Given a dictionary of key/value pairs, generates a fontconfig pattern string.
+
+
+"
+
+test_gridspec.py,29,test_repr,(),
+
+axis_direction_demo_step03.py,11,setup_axes,"(fig, rect)",
+
+multiprocess_sgskip.py,95,main,(),
+tight_bbox.py,72,process_figure_for_rasterizing,"(fig, bbox_inches_restore, fixed_dpi)","A function that needs to be called when figure dpi changes during the drawing (e.g., rasterizing).  It recovers the bbox and re-adjust it with the new dpi.
+
+
+"
+demo_gridspec06.py,13,squiggle_xy,"(a, b, c, d)",
+shading_example.py,36,compare,"(z, cmap, ve)",
+
+
+
+
+versioneer.py,1663,scan_setup_py,(),
+axis.py,1942,_make_getset_interval,"(method_name, lim_name, attr_name)","Helper to generate ``get_{data,view}_interval`` and ``set_{data,view}_interval`` implementations.
+
+
+"
+
+
+proj3d.py,169,rot_x,"(V, alpha)",
+_text_layout.py,8,layout,"(string, font)","Render *string* with *font*.  For each character in *string*, yield a (glyph-index, x-position) pair.  When such a pair is yielded, the font's glyph is set to the corresponding character.
+
+Parameters ---------- string : str The string to be rendered. font : FT2Font The font. kern_mode : int A FreeType kerning mode.
+
+Yields ------ glyph_index : int x_position : float
+"
